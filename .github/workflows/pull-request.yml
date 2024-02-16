@@ -33,17 +33,17 @@ jobs:
           projectId: himanshujain-dev
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
-      # - name: Send status message
-      #   if: success()
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   run: |
-      #     COMMENT="Congratulations! The build was successful."
-      #     curl -sSL -H "Authorization: token $GITHUB_TOKEN" -d "{\"body\": \"$COMMENT\"}" -H "Content-Type: application/json" -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments"
-      # - name: Send failure message with error details
-      #   if: failure()
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   run: |
-      #     COMMENT="Oops! The build failed."
-      #     curl -sSL -H "Authorization: token $GITHUB_TOKEN" -d "{\"body\": \"$COMMENT\"}" -H "Content-Type: application/json" -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments"
+      - name: Send status message
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COMMENT="Congratulations! The build was successful."
+          curl -sSL -H "Authorization: token $GITHUB_TOKEN" -d "{\"body\": \"$COMMENT\"}" -H "Content-Type: application/json" -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments"
+      - name: Send failure message with error details
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COMMENT="Oops! The build failed."
+          curl -sSL -H "Authorization: token $GITHUB_TOKEN" -d "{\"body\": \"$COMMENT\"}" -H "Content-Type: application/json" -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments"
