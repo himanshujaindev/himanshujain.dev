@@ -16,7 +16,7 @@ jobs:
       - name: Check node.js version
         run: node -v
       - name: Install pnpm
-        run: npm install -g pnpm@8.15.2
+        run: npm install -g pnpm@8.15.3
       - name: Check pnpm version
         run: pnpm -v
       - name: Install dependencies
