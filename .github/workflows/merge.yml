@@ -1,10 +1,12 @@
-# Runs when PR is created, updated, or reopened
+# Runs when PR is merged
 
-name: Deploy to Firebase Hosting on PR
-'on': pull_request
+name: Deploy to Firebase Hosting on merge
+'on':
+  push:
+    branches:
+      - main
 jobs:
-  build_and_preview:
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -16,7 +18,7 @@ jobs:
       - name: Check node.js version
         run: node -v
       - name: Install pnpm
-        run: npm install -g pnpm@8.15.2
+        run: npm install -g pnpm@8.15.3
       - name: Check pnpm version
         run: pnpm -v
       - name: Install dependencies
@@ -25,25 +27,12 @@ jobs:
         run: pnpm build
       - name: Enable Firebase experiments
         run: pnpm exec firebase experiments:enable webframeworks
-      - name: Firebase Deploy Preview
+      - name: Firebase Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HIMANSHUJAIN_DEV }}'
+          channelId: live
           projectId: himanshujain-dev
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
-      - name: Send status message
-        if: success()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          COMMENT="Congratulations! The build was successful."
-          curl -sSL -H "Authorization: token $GITHUB_TOKEN" -d "{\"body\": \"$COMMENT\"}" -H "Content-Type: application/json" -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments"
-      - name: Send failure message with error details
-        if: failure()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          COMMENT="Oops! The build failed."
-          curl -sSL -H "Authorization: token $GITHUB_TOKEN" -d "{\"body\": \"$COMMENT\"}" -H "Content-Type: application/json" -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments"
