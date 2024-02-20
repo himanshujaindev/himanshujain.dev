@@ -1,34 +1,34 @@
 {
   "basics": {
     "name": "Himanshu Jain",
-    "label": "Full-Stack developer with more than 15 years of experience & development content creator",
+    "label": "Cloud Engineer and Backend Developer",
     "image": "/me.webp",
-    "email": "miduga@gmail.com",
-    "phone": "+34 688888888",
-    "url": "https://midu.dev",
-    "summary": "+15 years of experience as a web developer. Currently I am a content creator and development dommunicator. I live in Barcelona, Spain. I have worked in different environments: from accelerating the development of start-ups to leading teams in multinational companies.",
+    "email": "nhimanshujain@gmail.com",
+    "phone": "",
+    "url": "https://himanshujain.dev",
+    "summary": "+2 years of experience as a software developer. Currently I am working as Platform Engineer and have hands-on experience designing and building systems through automation and structured code. I have bachelor's degree in Computer Science from PES Univeristy with Specilization in AI/ML.",
     "location": {
       "address": "",
       "postalCode": "08820",
-      "city": "el Prat de Llobregat",
-      "countryCode": "ES",
-      "region": "Spain"
+      "city": "Bangalore",
+      "countryCode": "IN",
+      "region": "India"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "midudev",
-        "url": "https://linkedin.com/in/midudev"
+        "username": "nhimanshujain",
+        "url": "https://www.linkedin.com/in/nhimanshujain"
       },
       {
         "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
+        "username": "5to9coder",
+        "url": "https://x.com/5to9coder"
       },
       {
         "network": "GitHub",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "nhimanshujain",
+        "url": "https://github.com/nhimanshujain"
       }
     ]
   },
