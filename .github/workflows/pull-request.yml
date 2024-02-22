@@ -1,9 +1,7 @@
 # Runs when PR is created, updated, or reopened
 
 name: Deploy to Firebase Hosting on PR
-on:
-  pull_request:
-  workflow_dispatch:
+on: pull_request
 jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
@@ -12,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '21.6.1'
       - name: Check node.js version
@@ -52,7 +50,7 @@ jobs:
 
       - name: Send Notification
         if: success() # success(), failure()
-        uses: dawidd6/action-send-mail@v2
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
