@@ -1,5 +1,5 @@
 ### Fork
-> [midudev/minimalist-portfolio-json](https://github.com/midudev/minimalist-portfolio-json) -> last_applied_commit.txt
+> [midudev/minimalist-portfolio-json](https://github.com/midudev/minimalist-portfolio-json) -> last_applied_commit.txt 
 
 
 ### Local Setup
