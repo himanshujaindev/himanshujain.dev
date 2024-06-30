@@ -7,19 +7,21 @@ import Experience from "@/components/sections/Experience.astro"
 import Hero from "@/components/sections/Hero.astro"
 import Projects from "@/components/sections/Projects.astro"
 import Skills from "@/components/sections/Skills.astro"
+import Publication from "@/components/sections/Publication.astro"
 import KeyboardManager from "@/components/KeyboardManager.astro"
 
 import { basics } from "@cv"
 const { name, label } = basics
 ---
 
-<Layout title={`Portafolio de ${name} - ${label}`}>
+<Layout title={`Portfolio of ${name} - ${label}`}>
   <main>
     <Hero />
     <About />
+    <Projects />
     <Experience />
     <Education />
-    <Projects />
+    <Publication />
     <Skills />
   </main>
 
