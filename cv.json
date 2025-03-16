@@ -6,7 +6,7 @@
     "email": "dev.himanshujain@gmail.com",
     "phone": "",
     "url": "https://himanshujain.dev",
-    "summary": "I'll let my work speak for itself. Checkout my projects ⤵️",
+    "summary": "Software Engineer with 3+ YOE",
     "location": {
       "address": "",
       "postalCode": "",
@@ -50,41 +50,49 @@
       ]
     }
   ],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
-  "education": [{
-    "institution": "PES University",
-    "url": "https://pes.edu",
-    "area": "Computer Science Engineering",
-    "studyType": "Bachelor",
-    "startDate": "2018-01-01",
-    "endDate": "2022-01-01",
-    "score": "9.6",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "PES University",
+      "url": "https://pes.edu",
+      "area": "Computer Science Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2018-01-01",
+      "endDate": "2022-01-01",
+      "score": "9.6",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
   "publications": [
     {
       "name": "TapasQA",
@@ -114,28 +122,32 @@
       "name": "Kubenetes",
       "level": "Master",
       "keywords": [
-        "Web development", "Frontend"
+        "Web development",
+        "Frontend"
       ]
     },
     {
       "name": "Terraform",
       "level": "Master",
       "keywords": [
-        "Web development", "Frontend"
+        "Web development",
+        "Frontend"
       ]
     },
     {
       "name": "Python",
       "level": "Master",
       "keywords": [
-        "Web development", "Frontend"
+        "Web development",
+        "Frontend"
       ]
     },
     {
       "name": "Java",
       "level": "Master",
       "keywords": [
-        "Web development", "Frontend"
+        "Web development",
+        "Frontend"
       ]
     }
   ],
@@ -145,17 +157,21 @@
       "fluency": "Advanced"
     }
   ],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
   "projects": [
     {
       "name": "kind-istio",
