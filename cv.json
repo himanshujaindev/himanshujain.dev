@@ -122,28 +122,22 @@
       "name": "Kubenetes"
     },
     {
-      "name": "Terraform",
-      "level": "Master",
-      "keywords": [
-        "Web development",
-        "Frontend"
-      ]
+      "name": "Terraform"
     },
     {
-      "name": "Python",
-      "level": "Master",
-      "keywords": [
-        "Web development",
-        "Frontend"
-      ]
+      "name": "Python"
     },
     {
-      "name": "Java",
-      "level": "Master",
-      "keywords": [
-        "Web development",
-        "Frontend"
-      ]
+      "name": "Java"
+    },
+    {
+      "name": "Go"
+    },
+    {
+      "name": "Automation"
+    },
+    {
+      "name": "ML"
     }
   ],
   "languages": [
