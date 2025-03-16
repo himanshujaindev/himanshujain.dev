@@ -119,12 +119,7 @@
   ],
   "skills": [
     {
-      "name": "Kubenetes",
-      "level": "Master",
-      "keywords": [
-        "Web development",
-        "Frontend"
-      ]
+      "name": "Kubenetes"
     },
     {
       "name": "Terraform",
