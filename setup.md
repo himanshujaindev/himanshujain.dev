@@ -33,6 +33,10 @@ v10.1.0
 corepack enable pnpm
 corepack prepare pnpm@latest --activate
 pnpm install
+
+
+--- Once dev is completed ---
+corepack disable pnpm
 ```
 
 ##### Build / Run the project
