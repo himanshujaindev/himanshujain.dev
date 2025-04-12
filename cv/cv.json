@@ -44,9 +44,42 @@
       "url": "https://cisco.com",
       "startDate": "2022-01-01",
       "endDate": null,
-      "summary": "Working on building data centers using terraform, scaling systems using various open-source softwares and improving security and reliablity using kubernetes at-scale",
-      "highlights": [
-        ""
+      "summary": [
+        "Designing solutions at a large scale to improve reliability and security.",
+        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
+        "Managing extensive infrastructure in Production during customer-impact.",
+        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
+      ],
+      "skills": [
+        "Kubernetes",
+        "Terraform",
+        "Python",
+        "Java",
+        "Go",
+        "Automation",
+        "ML"
+      ]
+    },
+    {
+      "name": "Cisco Systems",
+      "position": "Platform Engineer",
+      "url": "https://cisco.com",
+      "startDate": "2022-01-01",
+      "endDate": null,
+      "summary": [
+        "Designing solutions at a large scale to improve reliability and security. Designing solutions at a large scale to improve reliability and security.",
+        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use. Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
+        "Managing extensive infrastructure in Production during customer-impact.",
+        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
+      ],
+      "skills": [
+        "Kubernetes",
+        "Terraform",
+        "Python",
+        "Java",
+        "Go",
+        "Automation",
+        "ML"
       ]
     }
   ],

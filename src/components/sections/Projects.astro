@@ -1,8 +1,8 @@
 ---
-import GitHub from "@/icons/GitHub.astro"
-import Section from "../Section.astro"
+import GitHub from "@/icons/GitHub.astro";
+import Section from "../Section.astro";
 
-import { projects } from "@cv"
+import { projects } from "@cv";
 ---
 
 <Section title="Projects">
@@ -15,7 +15,11 @@ import { projects } from "@cv"
               <article>
                 <header>
                   <h3>
-                    <a href={url} target="_blank" title={`See the project ${name}`}>
+                    <a
+                      href={url}
+                      target="_blank"
+                      title={`See the project ${name}`}
+                    >
                       {name}
                     </a>
                     {isActive && <span>•</span>}
@@ -34,13 +38,13 @@ import { projects } from "@cv"
                 </header>
                 <footer>
                   {highlights.map((highlight) => {
-                    return <span>{highlight}</span>
+                    return <span>{highlight}</span>;
                   })}
                 </footer>
               </article>
             </li>
-          )
-        }
+          );
+        },
       )
     }
   </ul>
@@ -88,7 +92,7 @@ import { projects } from "@cv"
 
   article h3 span {
     color: rgb(0, 188, 47);
-animation-name: flicker;
+    animation-name: flicker;
     animation-duration: 3s;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;

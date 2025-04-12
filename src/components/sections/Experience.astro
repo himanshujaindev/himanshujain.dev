@@ -1,18 +1,42 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
+import { work } from "@cv";
+import HTML from "@/icons/html.astro";
+import CSS from "@/icons/css.astro";
+import JavaScript from "@/icons/javascript.astro";
+import TypeScript from "@/icons/type.astro";
+import React from "@/icons/react.astro";
+import Node from "@/icons/node.astro";
+import MySQL from "@/icons/sql.astro";
+import Git from "@/icons/git.astro";
+import GitHub from "@/icons/GitHub.astro";
+import Tailwind from "@/icons/tailwind.astro";
+import Next from "@/icons/next.astro";
 
-import { work } from "@cv"
+const SKILLS_ICONS: Record<string, any> = {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  React,
+  Node,
+  MySQL,
+  Git,
+  GitHub,
+  Next,
+  Tailwind,
+};
 ---
 
 <Section title="Experience">
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
+        ({ name, startDate, endDate, position, summary, url, skills }) => {
+          const startYear = new Date(startDate).getFullYear();
           const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present"
-          const years = `${startYear} - ${endYear}`
+            endDate != null ? new Date(endDate).getFullYear() : "Present";
+          const years = `${startYear} - ${endYear}`;
 
           return (
             <li>
@@ -31,12 +55,21 @@ import { work } from "@cv"
                 </header>
 
                 <footer>
-                  <p>{summary}</p>
+                  <ul class="summary">
+                    {summary.map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+
+                  <div class="skills">
+                    {skills &&
+                      skills.map((skill) => <span class="tag">{skill}</span>)}
+                  </div>
                 </footer>
               </article>
             </li>
-          )
-        }
+          );
+        },
       )
     }
   </ul>
@@ -63,8 +96,11 @@ import { work } from "@cv"
   }
 
   article h4 {
-    color: #222;
-    font-weight: 400;
+    color: #444;
+    font-weight: 550;
+    font-family: monospace;
+    font-size: 14px;
+    padding-top: 4px;
   }
 
   header {
@@ -78,6 +114,32 @@ import { work } from "@cv"
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
+  }
+
+  .summary {
+    padding-top: 6px;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+    font-size: 0.75rem;
+    gap: 8px;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .tag {
+    background: #eee;
+    border-radius: 6px;
+    color: #444;
+    font-size: 0.6rem;
+    font-weight: 550;
+    padding: 0.2rem 0.6rem;
+    font-family: monospace;
   }
 
   @media (width <= 700px) {
