@@ -4,7 +4,7 @@ name: Deploy to Firebase Hosting on PR
 on: pull_request
 jobs:
   build_and_preview:
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+    if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -12,15 +12,22 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '21.6.1'
+          node-version: "23.11.0"
       - name: Check node.js version
         run: node -v
       - name: Install pnpm
-        run: npm install -g pnpm@8.15.3
+        run: npm install -g pnpm@10.8.0
       - name: Check pnpm version
         run: pnpm -v
       - name: Install dependencies
         run: pnpm install
+      - name: Check dependencies version
+        run: |
+          pnpm view @astrojs/check version
+          pnpm view astro version
+          pnpm view firebase-tools version
+          pnpm view hotkeypad version
+          pnpm view typescript version
       - name: Build
         run: pnpm build
       - name: Enable Firebase experiments
@@ -28,8 +35,8 @@ jobs:
       - name: Firebase Deploy Preview
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HIMANSHUJAIN_DEV }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_HIMANSHUJAIN_DEV }}"
           projectId: himanshujain-dev
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks

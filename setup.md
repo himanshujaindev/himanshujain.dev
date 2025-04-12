@@ -1,36 +1,33 @@
 ### Local Setup
+
+##### Installation
 ```bash
-brew install n
-sudo npm install -g n
-sudo n lts
+brew install node
+sudo chown -R 501:20 "/Users/himanshujain/.npm"
+npm install -g n
 sudo n latest
 sudo n prune
-
 sudo npm install -g npm@latest
-
 brew install pnpm
-brew install corepack
-
-yarn info yarn description
-
-npm view @astrojs/check version
-npm view astro version
-npm view firebase-tools version
-npm view hotkeypad version
-npm view typescript version
-
 pnpm update
+brew install corepack
+pnpm view @astrojs/check version
+pnpm view astro version
+pnpm view firebase-tools version
+pnpm view hotkeypad version
+pnpm view typescript version
 
-❯ pnpm -v
-8.15.3
-❯ npm -v
-10.4.0
 ❯ node -v
-v21.6.1
-❯ yarn -v
-1.22.21
+v23.11.0
+❯ npm -v 
+11.3.0
+❯ n --version
+v10.1.0
+❯ pnpm -v
+10.8.0
 ```
 
+##### Enable pnpm
 ```bash
 --- RUN THIS ONLY ---
 corepack enable pnpm
@@ -38,14 +35,26 @@ corepack prepare pnpm@latest --activate
 pnpm install
 ```
 
+##### Build / Run the project
 ```bash
 pnpm build -> debug
 pnpm dev -> run locally [Use this while developement]
-
 pnpm preview -> See the final results
 ```
 
-#### Firebase 
+##### Update dependencies in package.json
+```bash
+pnpm outdated
+```
+
+##### Vulnerabilities
+```bash
+pnpm audit
+pnpm audit --fix
+pnpm install
+```
+
+#### Firebase  (First time only)
 ```bash
 https://docs.astro.build/en/guides/deploy/google-firebase/
 
