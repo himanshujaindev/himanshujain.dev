@@ -13,37 +13,39 @@ import { publications } from "@cv";
           return (
             <li>
               <article>
-                <header>
-                  <h3>
-                    <a
-                      href={url}
-                      target="_blank"
-                      title={`See the publication ${name}`}
-                    >
-                      {name}
-                    </a>
-                    {isActive && <span>•</span>}
-                    {github && (
+                <div class="article-inner">
+                  <header>
+                    <h3>
                       <a
-                        class="github-code-link"
-                        href={github}
+                        href={url}
                         target="_blank"
-                        title={`View paper source code ${name}`}
+                        title={`See the publication ${name}`}
                       >
-                        <GitHub />
+                        {name}
                       </a>
-                    )}
-                  </h3>
-                  <p>{description}</p>
-                </header>
-                <footer>
-                  {highlights.map((highlight) => {
-                    return <span>{highlight}</span>;
-                    <div class="tag" title={highlight}>
-                      <span>{highlight}</span>
-                    </div>;
-                  })}
-                </footer>
+                      {isActive && <span>•</span>}
+                      {github && (
+                        <a
+                          class="github-code-link"
+                          href={github}
+                          target="_blank"
+                          title={`View paper source code ${name}`}
+                        >
+                          <GitHub />
+                        </a>
+                      )}
+                    </h3>
+                    <p>{description}</p>
+                  </header>
+                  <footer>
+                    {highlights.map((highlight) => {
+                      return <span>{highlight}</span>;
+                      <div class="tag" title={highlight}>
+                        <span>{highlight}</span>
+                      </div>;
+                    })}
+                  </footer>
+                </div>
               </article>
             </li>
           );
@@ -56,7 +58,8 @@ import { publications } from "@cv";
 <style>
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 750px;
     gap: 1rem;
     margin-inline: -16px;
   }
@@ -111,6 +114,7 @@ import { publications } from "@cv";
     flex-wrap: wrap;
     gap: 4px;
     font-size: 0.6rem;
+    padding-top: 10px;
   }
 
   footer span {
@@ -124,6 +128,10 @@ import { publications } from "@cv";
 
   .github-code-link {
     margin-left: 5px;
+  }
+
+  .article-inner {
+    padding: 12px;
   }
 
   @keyframes flicker {

@@ -11,29 +11,31 @@ import { certificates } from "@cv";
         return (
           <li>
             <article>
-              <a
-                href={url}
-                target="_blank"
-                title={`See the publication ${name}`}
-                class="certificate-link"
-              >
-                <header>
-                  <div class="title-row">
-                    <h3>{name}</h3>
+              <div class="article-inner">
+                <a
+                  href={url}
+                  target="_blank"
+                  title={`See the publication ${name}`}
+                  class="certificate-link"
+                >
+                  <header>
+                    <div class="title-row">
+                      <h3>{name}</h3>
+                    </div>
+                    <time>{date}</time>
+                  </header>
+
+                  <footer>
+                    <p>{issuer}</p>
+                  </footer>
+                </a>
+
+                {logo && (
+                  <div class="logo-wrapper">
+                    <img src={logo} alt={`${issuer} logo`} />
                   </div>
-                  <time>{date}</time>
-                </header>
-
-                <footer>
-                  <p>{issuer}</p>
-                </footer>
-              </a>
-
-              {logo && (
-                <div class="logo-wrapper">
-                  <img src={logo} alt={`${issuer} logo`} />
-                </div>
-              )}
+                )}
+              </div>
             </article>
           </li>
         );
@@ -45,7 +47,8 @@ import { certificates } from "@cv";
 <style>
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 750px;
     gap: 1rem;
     margin-inline: -16px;
   }
@@ -106,6 +109,7 @@ import { certificates } from "@cv";
     flex-wrap: wrap;
     gap: 4px;
     font-size: 0.6rem;
+    padding-top: 10px;
   }
 
   footer p {
@@ -130,6 +134,10 @@ import { certificates } from "@cv";
     width: auto;
     object-fit: contain;
     max-width: 120px;
+  }
+
+  .article-inner {
+    padding: 12px;
   }
 
   @media (width <= 700px) {

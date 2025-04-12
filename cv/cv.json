@@ -162,6 +162,13 @@
       "issuer": "Coursera - deeplearning.ai",
       "url": "https://drive.google.com/file/d/1cJbG8zeO9ol2mmj9v-v4akjJpZhdXFLK/view?usp=sharing",
       "logo": "/certificates/coursera.png"
+    },
+    {
+      "name": "Improving Deep Neural Networks",
+      "date": "Aug, 2020",
+      "issuer": "Coursera - deeplearning.ai",
+      "url": "https://drive.google.com/file/d/1cJbG8zeO9ol2mmj9v-v4akjJpZhdXFLK/view?usp=sharing",
+      "logo": "/certificates/coursera.png"
     }
   ],
   "publications": [
@@ -175,6 +182,17 @@
       ],
       "url": "https://link.springer.com/chapter/10.1007/978-3-031-12413-6_6",
       "github": "https://github.com/himanshujaindev/TapasQA"
+    },
+    {
+      "name": "MAPLE",
+      "isActive": false,
+      "description": "Implementation of the paper, MAPLE - MAsking words to generate blackout Poetry using sequence-to-sequence LEarning, ICNLSP 2021",
+      "highlights": [
+        "Blackout Poetry",
+        "Natural Language Processing"
+      ],
+      "url": "https://aclanthology.org/2021.icnlsp-1.6.pdf",
+      "github": "https://github.com/himanshujaindev/maple"
     },
     {
       "name": "MAPLE",
