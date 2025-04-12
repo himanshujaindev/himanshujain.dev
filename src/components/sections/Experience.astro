@@ -13,18 +13,18 @@ import GitHub from "@/icons/GitHub.astro";
 import Tailwind from "@/icons/tailwind.astro";
 import Next from "@/icons/next.astro";
 
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
+const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
+  HTML: { icon: HTML, name: "HTML" },
+  CSS: { icon: CSS, name: "CSS" },
+  JavaScript: { icon: JavaScript, name: "JavaScript" },
+  TypeScript: { icon: TypeScript, name: "TypeScript" },
+  React: { icon: React, name: "React" },
+  Node: { icon: Node, name: "Node.js" },
+  MySQL: { icon: MySQL, name: "MySQL" },
+  Git: { icon: Git, name: "Git" },
+  GitHub: { icon: GitHub, name: "GitHub" },
+  Tailwind: { icon: Tailwind, name: "Tailwind CSS" },
+  Next: { icon: Next, name: "Next.js" },
 };
 ---
 
@@ -63,7 +63,16 @@ const SKILLS_ICONS: Record<string, any> = {
 
                   <div class="skills">
                     {skills &&
-                      skills.map((skill) => <span class="tag">{skill}</span>)}
+                      skills.map((skill) => {
+                        const skillData = SKILLS_MAP[skill];
+
+                        return (
+                          <div class="tag" title={skillData?.name ?? skill}>
+                            {skillData?.icon && <skillData.icon />}
+                            <span>{skillData?.name ?? skill}</span>
+                          </div>
+                        );
+                      })}
                   </div>
                 </footer>
               </article>
@@ -136,12 +145,15 @@ const SKILLS_ICONS: Record<string, any> = {
   }
 
   .tag {
+    align-items: center;
+    display: flex;
+    gap: 4px;
     background: #eee;
     border-radius: 6px;
     color: #444;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 570;
-    padding: 0.2rem 0.6rem;
+    padding: 0.15rem 0.45rem;
     font-family: monospace;
   }
 
