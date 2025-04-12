@@ -39,11 +39,34 @@
   },
   "work": [
     {
+      "name": "Name",
+      "position": "Software Engineer",
+      "url": "https://cisco.com",
+      "startDate": "2022-01-01",
+      "endDate": null,
+      "summary": [
+        "Designing solutions at a large scale to improve reliability and security. Designing solutions at a large scale to improve reliability and security.",
+        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use. Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
+        "Managing extensive infrastructure in Production during customer-impact.",
+        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
+      ],
+      "skills": [
+        "Next",
+        "Git",
+        "Tailwind",
+        "Next",
+        "Kubernetes",
+        "Terraform",
+        "Python",
+        "Java"
+      ]
+    },
+    {
       "name": "Cisco Systems",
       "position": "Platform Engineer",
       "url": "https://cisco.com",
       "startDate": "2022-01-01",
-      "endDate": null,
+      "endDate": "2025-03-25",
       "summary": [
         "Designing solutions at a large scale to improve reliability and security.",
         "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
@@ -60,34 +83,29 @@
         "MySQL",
         "Git",
         "GitHub",
-        "Tailwind",
-        "Next",
-        "Git",
-        "GitHub",
-        "Tailwind",
-        "Next"
-      ]
-    },
-    {
-      "name": "Cisco Systems",
-      "position": "Platform Engineer",
-      "url": "https://cisco.com",
-      "startDate": "2022-01-01",
-      "endDate": null,
-      "summary": [
-        "Designing solutions at a large scale to improve reliability and security. Designing solutions at a large scale to improve reliability and security.",
-        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use. Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
-        "Managing extensive infrastructure in Production during customer-impact.",
-        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
+        "Tailwind"
       ],
-      "skills": [
-        "Kubernetes",
-        "Terraform",
-        "Python",
-        "Java",
-        "MySQL",
-        "Automation",
-        "ML"
+      "pdfs": [
+        {
+          "coverImage": "/public/pdf/award-1.png",
+          "title": "Automating GuardDuty Rollout",
+          "pdfUrl": "/public/pdf/award-1.pdf"
+        },
+        {
+          "coverImage": "/public/pdf/award-2.png",
+          "title": "Fast learner skills",
+          "pdfUrl": "/public/pdf/award-2.pdf"
+        },
+        {
+          "coverImage": "/public/pdf/award-3.png",
+          "title": "Istio Websocket automation in PRBuilder",
+          "pdfUrl": "/public/pdf/award-3.pdf"
+        },
+        {
+          "coverImage": "/public/pdf/award-4.png",
+          "title": "A stellar job with Istio Upgrade",
+          "pdfUrl": "/public/pdf/award-4.pdf"
+        }
       ]
     }
   ],
@@ -114,7 +132,11 @@
       "endDate": "2022-01-01",
       "score": "9.6",
       "courses": [
-        "DB1101 - Basic SQL"
+        "Cloud Computing",
+        "Operating Systems",
+        "NLP",
+        "DSA",
+        "Data Analytics"
       ]
     }
   ],
@@ -128,10 +150,18 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "Certified Kubernetes Administrator",
+      "date": "Aug, 2023",
+      "issuer": "The Linux Foundation",
+      "url": "https://www.credly.com/badges/193744c9-9959-49ee-b3ae-b38ef6ce6bf1/public_url",
+      "logo": "public/certificates/cka.png"
+    },
+    {
+      "name": "Improving Deep Neural Networks",
+      "date": "Aug, 2020",
+      "issuer": "Coursera - deeplearning.ai",
+      "url": "https://drive.google.com/file/d/1cJbG8zeO9ol2mmj9v-v4akjJpZhdXFLK/view?usp=sharing",
+      "logo": "public/certificates/coursera.png"
     }
   ],
   "publications": [
@@ -205,7 +235,7 @@
       "isActive": true,
       "description": "Mini Compiler For Python-3 Using Lex and Yacc",
       "highlights": [
-        ""
+        "compiler"
       ],
       "github": "https://github.com/himanshujaindev/Python3-MiniCompiler"
     },
@@ -224,7 +254,7 @@
       "name": "WeatherApp",
       "description": "Android Weather App Using Kotlin",
       "highlights": [
-        ""
+        "android app dev"
       ],
       "github": "https://github.com/himanshujaindev/WeatherApp"
     },

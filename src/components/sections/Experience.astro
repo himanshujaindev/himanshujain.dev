@@ -3,6 +3,7 @@ import Section from "../Section.astro";
 import { work } from "@cv";
 import HTML from "@/icons/html.astro";
 import CSS from "@/icons/css.astro";
+import Kubernetes from "@/icons/kubernetes.astro";
 import JavaScript from "@/icons/javascript.astro";
 import TypeScript from "@/icons/type.astro";
 import React from "@/icons/react.astro";
@@ -12,6 +13,7 @@ import GitHub from "@/icons/github.astro";
 import Git from "@/icons/git.astro";
 import Tailwind from "@/icons/tailwind.astro";
 import Next from "@/icons/next.astro";
+import "@/components/sections/styles/pdf.css";
 
 const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
   HTML: { icon: HTML, name: "HTML" },
@@ -25,6 +27,7 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
   GitHub: { icon: GitHub, name: "GitHub" },
   Tailwind: { icon: Tailwind, name: "Tailwind CSS" },
   Next: { icon: Next, name: "Next.js" },
+  Kubernetes: { icon: Kubernetes, name: "Kubernetes" },
 };
 ---
 
@@ -32,7 +35,16 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, url, skills }) => {
+        ({
+          name,
+          startDate,
+          endDate,
+          position,
+          summary,
+          url,
+          skills,
+          pdfs,
+        }) => {
           const startYear = new Date(startDate).getFullYear();
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : "Present";
@@ -61,6 +73,7 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
                     ))}
                   </ul>
 
+                  {/* Skills */}
                   <div class="skills">
                     {skills &&
                       skills.map((skill) => {
@@ -74,6 +87,28 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
                         );
                       })}
                   </div>
+
+                  {/* PDF Attachments from work entry */}
+                  {pdfs && pdfs.length > 0 && (
+                    <div class="pdf-attachments">
+                      {pdfs.map(({ coverImage, title, pdfUrl }) => (
+                        <div class="pdf-item">
+                          <a href={pdfUrl} target="_blank" title={title}>
+                            <div class="pdf-image-wrapper">
+                              <img
+                                src={coverImage}
+                                alt={title}
+                                class="pdf-cover"
+                              />
+                              <div class="pdf-overlay">
+                                <p class="pdf-title">{title}</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </footer>
               </article>
             </li>
@@ -120,7 +155,7 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
 
   time {
     color: #555;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     min-width: 102px;
   }
 
@@ -142,19 +177,6 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 16px;
-  }
-
-  .tag {
-    align-items: center;
-    display: flex;
-    gap: 4px;
-    background: #eee;
-    border-radius: 6px;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 570;
-    padding: 0.15rem 0.45rem;
-    font-family: monospace;
   }
 
   @media (width <= 700px) {

@@ -2,12 +2,13 @@
 import Section from "../Section.astro";
 
 import { education } from "@cv";
+import "@/components/sections/styles/tag.css";
 ---
 
 <Section title="Education">
   <ul>
     {
-      education.map(({ institution, startDate, endDate, area }) => {
+      education.map(({ institution, startDate, endDate, area, courses }) => {
         const startYear = new Date(startDate).getFullYear();
         const endYear =
           endDate != null ? new Date(endDate).getFullYear() : "Present";
@@ -26,6 +27,18 @@ import { education } from "@cv";
 
               <footer>
                 <p>{area}</p>
+
+                {/* Courses */}
+                <div class="courses">
+                  {courses &&
+                    courses.map((skill) => {
+                      return (
+                        <div class="tag" title={skill}>
+                          <span>{skill}</span>
+                        </div>
+                      );
+                    })}
+                </div>
               </footer>
             </article>
           </li>
@@ -58,6 +71,13 @@ import { education } from "@cv";
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
+  }
+
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
   }
 
   @media (width <= 700px) {

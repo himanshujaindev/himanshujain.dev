@@ -1,0 +1,146 @@
+---
+import Section from "../Section.astro";
+
+import { certificates } from "@cv";
+---
+
+<Section title="Certificates">
+  <ul>
+    {
+      certificates.map(({ name, date, issuer, url, logo }) => {
+        return (
+          <li>
+            <article>
+              <a
+                href={url}
+                target="_blank"
+                title={`See the publication ${name}`}
+                class="certificate-link"
+              >
+                <header>
+                  <div class="title-row">
+                    <h3>{name}</h3>
+                  </div>
+                  <time>{date}</time>
+                </header>
+
+                <footer>
+                  <p>{issuer}</p>
+                </footer>
+              </a>
+
+              {logo && (
+                <div class="logo-wrapper">
+                  <img src={logo} alt={`${issuer} logo`} />
+                </div>
+              )}
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-inline: -16px;
+  }
+
+  .certificate-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  article {
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+    transition: box-shadow 0.3s ease;
+    position: relative; /* Add this to ensure positioning of the logo */
+  }
+
+  article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  article time {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  article header {
+    flex: 1;
+  }
+
+  article h3 {
+    margin-bottom: 4px;
+  }
+
+  article a {
+    color: #111; /* Keep title links in dark color */
+  }
+
+  article a:hover {
+    text-decoration: none; /* Maintain no underline for overall box */
+  }
+
+  article p {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 0.6rem;
+  }
+
+  footer p {
+    color: #444;
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .logo-wrapper img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    max-width: 120px;
+  }
+
+  @media (width <= 700px) {
+    ul {
+      margin-inline: 0;
+    }
+
+    article {
+      border: none;
+      box-shadow: 0 1px 1px #f2f2f2;
+      padding: 0 0 16px 0;
+    }
+  }
+</style>

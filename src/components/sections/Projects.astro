@@ -39,6 +39,9 @@ import { projects } from "@cv";
                 <footer>
                   {highlights.map((highlight) => {
                     return <span>{highlight}</span>;
+                    <div class="tag" title={highlight}>
+                      <span>{highlight}</span>
+                    </div>;
                   })}
                 </footer>
               </article>
@@ -66,6 +69,11 @@ import { projects } from "@cv";
     flex-direction: column;
     padding: 16px;
     height: 100%;
+    transition: box-shadow 0.3s ease;
+  }
+
+  article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   article header {
