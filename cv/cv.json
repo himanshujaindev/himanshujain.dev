@@ -51,13 +51,21 @@
         "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
       ],
       "skills": [
-        "Kubernetes",
-        "Terraform",
-        "Python",
-        "Java",
-        "Go",
-        "Automation",
-        "ML"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node",
+        "MySQL",
+        "Git",
+        "GitHub",
+        "Tailwind",
+        "Next",
+        "Git",
+        "GitHub",
+        "Tailwind",
+        "Next"
       ]
     },
     {
@@ -148,29 +156,6 @@
       ],
       "url": "https://aclanthology.org/2021.icnlsp-1.6.pdf",
       "github": "https://github.com/himanshujaindev/maple"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Kubenetes"
-    },
-    {
-      "name": "Terraform"
-    },
-    {
-      "name": "Python"
-    },
-    {
-      "name": "Java"
-    },
-    {
-      "name": "Go"
-    },
-    {
-      "name": "Automation"
-    },
-    {
-      "name": "ML"
     }
   ],
   "languages": [

@@ -55,9 +55,9 @@ const SKILLS_ICONS: Record<string, any> = {
                 </header>
 
                 <footer>
-                  <ul class="summary">
+                  <ul class="summary-ul">
                     {summary.map((point) => (
-                      <li>{point}</li>
+                      <li class="summary-li">{point}</li>
                     ))}
                   </ul>
 
@@ -96,9 +96,8 @@ const SKILLS_ICONS: Record<string, any> = {
   }
 
   article h4 {
-    color: #444;
-    font-weight: 550;
-    font-family: monospace;
+    color: #555;
+    font-weight: 500;
     font-size: 14px;
     padding-top: 4px;
   }
@@ -116,13 +115,17 @@ const SKILLS_ICONS: Record<string, any> = {
     min-width: 102px;
   }
 
-  .summary {
+  .summary-ul {
     padding-top: 6px;
     padding-left: 20px;
     list-style-type: disc;
     color: #555;
     font-size: 0.75rem;
     gap: 8px;
+  }
+
+  .summary-li {
+    line-height: 1.5;
   }
 
   .skills {
@@ -136,8 +139,8 @@ const SKILLS_ICONS: Record<string, any> = {
     background: #eee;
     border-radius: 6px;
     color: #444;
-    font-size: 0.6rem;
-    font-weight: 550;
+    font-size: 0.7rem;
+    font-weight: 570;
     padding: 0.2rem 0.6rem;
     font-family: monospace;
   }
