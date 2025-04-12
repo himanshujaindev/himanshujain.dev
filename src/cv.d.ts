@@ -6,7 +6,6 @@ export interface CV {
   awards: Array<Awards>
   certificates: Array<Certificates>
   publications: Array<Publications>
-  skills: Array<Skills>
   languages: Array<Languages>
   interests: Array<Interests>
   references: Array<References>
@@ -59,12 +58,6 @@ interface Volunteer {
   endDate: DateStr
   summary: string
   highlights: Highlight
-}
-
-interface Skills {
-  name: string
-  level: string
-  keywords: Array<string>
 }
 
 interface Awards {
