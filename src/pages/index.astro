@@ -1,20 +1,20 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import About from "@/components/sections/About.astro"
-import Education from "@/components/sections/Education.astro"
-import Experience from "@/components/sections/Experience.astro"
-import Hero from "@/components/sections/Hero.astro"
-import Projects from "@/components/sections/Projects.astro"
-import Skills from "@/components/sections/Skills.astro"
-import Publication from "@/components/sections/Publication.astro"
-import KeyboardManager from "@/components/KeyboardManager.astro"
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Certificates from "@/components/sections/Certificates.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Publication from "@/components/sections/Publication.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
 
-import { basics } from "@cv"
-const { name, label } = basics
+import { basics } from "@cv";
+const { name, label } = basics;
 ---
 
-<Layout title={`Portfolio of ${name} - ${label}`}>
+<Layout title={`Portfolio of ${name}`}>
   <main>
     <Hero />
     <About />
@@ -22,7 +22,7 @@ const { name, label } = basics
     <Experience />
     <Education />
     <Publication />
-    <Skills />
+    <Certificates />
   </main>
 
   <KeyboardManager />

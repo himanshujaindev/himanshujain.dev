@@ -128,6 +128,6 @@ i  Writing project information to .firebaserc...
 pnpm exec firebase deploy --only hosting
 ```
 
-### GitHub Actions
+### GitHub Actions 
 <img width="702" alt="image" src="https://github.com/user-attachments/assets/383c0459-176f-4a57-aee7-a5043cb6de14" />
 

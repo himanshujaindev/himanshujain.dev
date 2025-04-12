@@ -39,14 +39,73 @@
   },
   "work": [
     {
+      "name": "Name",
+      "position": "Software Engineer",
+      "url": "https://cisco.com",
+      "startDate": "2022-01-01",
+      "endDate": null,
+      "summary": [
+        "Designing solutions at a large scale to improve reliability and security. Designing solutions at a large scale to improve reliability and security.",
+        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use. Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
+        "Managing extensive infrastructure in Production during customer-impact.",
+        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
+      ],
+      "skills": [
+        "Next",
+        "Git",
+        "Tailwind",
+        "Next",
+        "Kubernetes",
+        "Terraform",
+        "Python",
+        "Java"
+      ]
+    },
+    {
       "name": "Cisco Systems",
       "position": "Platform Engineer",
       "url": "https://cisco.com",
       "startDate": "2022-01-01",
-      "endDate": null,
-      "summary": "Working on building data centers using terraform, scaling systems using various open-source softwares and improving security and reliablity using kubernetes at-scale",
-      "highlights": [
-        ""
+      "endDate": "2025-03-25",
+      "summary": [
+        "Designing solutions at a large scale to improve reliability and security.",
+        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
+        "Managing extensive infrastructure in Production during customer-impact.",
+        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
+      ],
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node",
+        "MySQL",
+        "Git",
+        "GitHub",
+        "Tailwind"
+      ],
+      "pdfs": [
+        {
+          "coverImage": "/pdf/award-1.png",
+          "title": "Automating GuardDuty Rollout",
+          "pdfUrl": "/pdf/award-1.pdf"
+        },
+        {
+          "coverImage": "/pdf/award-2.png",
+          "title": "Fast learner skills",
+          "pdfUrl": "/pdf/award-2.pdf"
+        },
+        {
+          "coverImage": "/pdf/award-3.png",
+          "title": "Istio Websocket automation in PRBuilder",
+          "pdfUrl": "/pdf/award-3.pdf"
+        },
+        {
+          "coverImage": "/pdf/award-4.png",
+          "title": "A stellar job with Istio Upgrade",
+          "pdfUrl": "/pdf/award-4.pdf"
+        }
       ]
     }
   ],
@@ -73,7 +132,11 @@
       "endDate": "2022-01-01",
       "score": "9.6",
       "courses": [
-        "DB1101 - Basic SQL"
+        "Cloud Computing",
+        "Operating Systems",
+        "NLP",
+        "DSA",
+        "Data Analytics"
       ]
     }
   ],
@@ -87,10 +150,25 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "Certified Kubernetes Administrator",
+      "date": "Aug, 2023",
+      "issuer": "The Linux Foundation",
+      "url": "https://www.credly.com/badges/193744c9-9959-49ee-b3ae-b38ef6ce6bf1/public_url",
+      "logo": "/certificates/cka.png"
+    },
+    {
+      "name": "Improving Deep Neural Networks",
+      "date": "Aug, 2020",
+      "issuer": "Coursera - deeplearning.ai",
+      "url": "https://drive.google.com/file/d/1cJbG8zeO9ol2mmj9v-v4akjJpZhdXFLK/view?usp=sharing",
+      "logo": "/certificates/coursera.png"
+    },
+    {
+      "name": "Improving Deep Neural Networks",
+      "date": "Aug, 2020",
+      "issuer": "Coursera - deeplearning.ai",
+      "url": "https://drive.google.com/file/d/1cJbG8zeO9ol2mmj9v-v4akjJpZhdXFLK/view?usp=sharing",
+      "logo": "/certificates/coursera.png"
     }
   ],
   "publications": [
@@ -115,29 +193,17 @@
       ],
       "url": "https://aclanthology.org/2021.icnlsp-1.6.pdf",
       "github": "https://github.com/himanshujaindev/maple"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Kubenetes"
     },
     {
-      "name": "Terraform"
-    },
-    {
-      "name": "Python"
-    },
-    {
-      "name": "Java"
-    },
-    {
-      "name": "Go"
-    },
-    {
-      "name": "Automation"
-    },
-    {
-      "name": "ML"
+      "name": "MAPLE",
+      "isActive": false,
+      "description": "Implementation of the paper, MAPLE - MAsking words to generate blackout Poetry using sequence-to-sequence LEarning, ICNLSP 2021",
+      "highlights": [
+        "Blackout Poetry",
+        "Natural Language Processing"
+      ],
+      "url": "https://aclanthology.org/2021.icnlsp-1.6.pdf",
+      "github": "https://github.com/himanshujaindev/maple"
     }
   ],
   "languages": [
@@ -187,7 +253,7 @@
       "isActive": true,
       "description": "Mini Compiler For Python-3 Using Lex and Yacc",
       "highlights": [
-        ""
+        "compiler"
       ],
       "github": "https://github.com/himanshujaindev/Python3-MiniCompiler"
     },
@@ -206,7 +272,7 @@
       "name": "WeatherApp",
       "description": "Android Weather App Using Kotlin",
       "highlights": [
-        ""
+        "android app dev"
       ],
       "github": "https://github.com/himanshujaindev/WeatherApp"
     },

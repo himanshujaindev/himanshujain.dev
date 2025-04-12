@@ -1,42 +1,116 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
+import { work } from "@cv";
+import HTML from "@/icons/html.astro";
+import CSS from "@/icons/css.astro";
+import Kubernetes from "@/icons/kubernetes.astro";
+import JavaScript from "@/icons/javascript.astro";
+import TypeScript from "@/icons/type.astro";
+import React from "@/icons/react.astro";
+import Node from "@/icons/node.astro";
+import MySQL from "@/icons/sql.astro";
+import GitHub from "@/icons/github.astro";
+import Git from "@/icons/git.astro";
+import Tailwind from "@/icons/tailwind.astro";
+import Next from "@/icons/next.astro";
+import "@/components/sections/styles/pdf.css";
 
-import { work } from "@cv"
+const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
+  HTML: { icon: HTML, name: "HTML" },
+  CSS: { icon: CSS, name: "CSS" },
+  JavaScript: { icon: JavaScript, name: "JavaScript" },
+  TypeScript: { icon: TypeScript, name: "TypeScript" },
+  React: { icon: React, name: "React" },
+  Node: { icon: Node, name: "Node.js" },
+  MySQL: { icon: MySQL, name: "MySQL" },
+  Git: { icon: Git, name: "Git" },
+  GitHub: { icon: GitHub, name: "GitHub" },
+  Tailwind: { icon: Tailwind, name: "Tailwind CSS" },
+  Next: { icon: Next, name: "Next.js" },
+  Kubernetes: { icon: Kubernetes, name: "Kubernetes" },
+};
 ---
 
 <Section title="Experience">
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
+        (
+          { name, startDate, endDate, position, summary, url, skills, pdfs },
+          index,
+        ) => {
+          const startYear = new Date(startDate).getFullYear();
           const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present"
-          const years = `${startYear} - ${endYear}`
+            endDate != null ? new Date(endDate).getFullYear() : "Present";
+          const years = `${startYear} - ${endYear}`;
+          const isLast = index === work.length - 1;
 
           return (
-            <li>
-              <article>
-                <header>
-                  <div>
-                    <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
-                        {name}
-                      </a>
-                    </h3>
-                    <h4>{position}</h4>
-                  </div>
+            <>
+              <li>
+                <article>
+                  <header>
+                    <div>
+                      <h3>
+                        <a href={url} title={`Ver ${name}`} target="_blank">
+                          {name}
+                        </a>
+                      </h3>
+                      <h4>{position}</h4>
+                    </div>
 
-                  <time>{years}</time>
-                </header>
+                    <time>{years}</time>
+                  </header>
 
-                <footer>
-                  <p>{summary}</p>
-                </footer>
-              </article>
-            </li>
-          )
-        }
+                  <footer>
+                    <ul class="summary-ul">
+                      {summary.map((point) => (
+                        <li class="summary-li">{point}</li>
+                      ))}
+                    </ul>
+
+                    {/* Skills */}
+                    <div class="skills">
+                      {skills &&
+                        skills.map((skill) => {
+                          const skillData = SKILLS_MAP[skill];
+                          return (
+                            <div class="tag" title={skillData?.name ?? skill}>
+                              {skillData?.icon && <skillData.icon />}
+                              <span>{skillData?.name ?? skill}</span>
+                            </div>
+                          );
+                        })}
+                    </div>
+
+                    {/* PDF Attachments */}
+                    {pdfs && pdfs.length > 0 && (
+                      <div class="pdf-attachments">
+                        {pdfs.map(({ coverImage, title, pdfUrl }) => (
+                          <div class="pdf-item">
+                            <a href={pdfUrl} target="_blank" title={title}>
+                              <div class="pdf-image-wrapper">
+                                <img
+                                  src={coverImage}
+                                  alt={title}
+                                  class="pdf-cover"
+                                />
+                                <div class="pdf-overlay">
+                                  <p class="pdf-title">{title}</p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </footer>
+                </article>
+              </li>
+              {!isLast && <hr class="experience-separator" />}
+            </>
+          );
+        },
       )
     }
   </ul>
@@ -63,8 +137,10 @@ import { work } from "@cv"
   }
 
   article h4 {
-    color: #222;
-    font-weight: 400;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 4px;
   }
 
   header {
@@ -76,8 +152,34 @@ import { work } from "@cv"
 
   time {
     color: #555;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     min-width: 102px;
+  }
+
+  .summary-ul {
+    padding-top: 6px;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+    font-size: 0.75rem;
+    gap: 8px;
+  }
+
+  .summary-li {
+    line-height: 1.5;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .experience-separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2px 0;
   }
 
   @media (width <= 700px) {

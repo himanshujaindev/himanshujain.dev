@@ -1,29 +1,29 @@
 ---
-import { basics } from "@cv"
-import Section from "@/components/Section.astro"
-import Mail from "@/icons/Mail.astro"
-import Phone from "@/icons/Phone.astro"
-import X from "@/icons/X.astro"
-import LinkedIn from "@/icons/LinkedIn.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Medium from "@/icons/Medium.astro"
-import WorldMap from "@/icons/WorldMap.astro"
-import type { SocialIcon } from "@/types"
+import { basics } from "@cv";
+import Section from "@/components/Section.astro";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+import X from "@/icons/X.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import GitHub from "@/icons/github.astro";
+import Medium from "@/icons/Medium.astro";
+import WorldMap from "@/icons/WorldMap.astro";
+import type { SocialIcon } from "@/types";
 
-const { name, label, image, location, profiles, phone, email } = basics
-const { city, region } = location
+const { name, label, image, location, profiles, phone, email } = basics;
+const { city, region } = location;
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
   LinkedIn,
   X,
-  Medium
-}
+  Medium,
+};
 
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
-const linkedUrl = linkedInfo?.url
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedUrl = linkedInfo?.url;
 
-const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
 
 <Section>
@@ -65,7 +65,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
         }
         {
           profiles.map(({ network, url, username }) => {
-            const Icon = SOCIAL_ICONS[network]
+            const Icon = SOCIAL_ICONS[network];
 
             return (
               <a
@@ -76,13 +76,13 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
               >
                 <Icon />
               </a>
-            )
+            );
           })
         }
       </footer>
     </div>
     <figure>
-      <img src={image} alt={name} style="width: 135px; height: 135px;"/>
+      <img src={image} alt={name} style="width: 135px; height: 135px;" />
     </figure>
   </div>
 </Section>

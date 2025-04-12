@@ -15,7 +15,8 @@
 ### References:
 1. https://jsonresume.org/schema
 2. Original - https://github.com/BartoszJarocki/cv (Bartosz Jarocki)
-3. https://pnpm.io/installation
+3. Dark Mode - https://github.com/codecatcoffee/resume
+4. https://pnpm.io/installation
 
 ### Good portfolios
 1. https://github.com/kav-ya/kav-ya.github.io
