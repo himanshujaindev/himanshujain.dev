@@ -57,7 +57,7 @@
         "Terraform",
         "Python",
         "Java",
-        "Golang",
+        "Go",
         "AWS",
         "Kubernetes",
         "Docker",
@@ -102,9 +102,9 @@
         "Java",
         "Scala",
         "Gatling",
-        "JMeter",
+        "Jmeter",
         "Git",
-        "REST APIs"
+        "API"
       ],
       "pdfs": [
         {
