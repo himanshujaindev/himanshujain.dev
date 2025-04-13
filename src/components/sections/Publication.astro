@@ -1,5 +1,6 @@
 ---
 import GitHub from "@/icons/github.astro";
+import Scholar from "@/icons/scholar.astro";
 import Section from "../Section.astro";
 
 import { publications } from "@cv";
@@ -8,49 +9,49 @@ import { publications } from "@cv";
 <Section title="Publication">
   <ul>
     {
-      publications.map(
-        ({ url, description, highlights, name, isActive, github }) => {
-          return (
-            <li>
-              <article>
-                <div class="article-inner">
-                  <header>
-                    <h3>
-                      <a
-                        href={url}
-                        target="_blank"
-                        title={`See the publication ${name}`}
-                      >
-                        {name}
-                      </a>
-                      {isActive && <span>•</span>}
-                      {github && (
-                        <a
-                          class="github-code-link"
-                          href={github}
-                          target="_blank"
-                          title={`View paper source code ${name}`}
-                        >
-                          <GitHub />
-                        </a>
-                      )}
-                    </h3>
-                    <p>{description}</p>
-                  </header>
-                  <footer>
-                    {highlights.map((highlight) => {
-                      return <span>{highlight}</span>;
-                      <div class="tag" title={highlight}>
-                        <span>{highlight}</span>
-                      </div>;
-                    })}
-                  </footer>
-                </div>
-              </article>
-            </li>
-          );
-        },
-      )
+      publications.map(({ description, highlights, name, github, url }) => (
+        <li>
+          <article>
+            <div class="article-inner">
+              <header>
+                <h3 class="project-header">
+                  <span class="project-name">{name}</span>
+
+                  {url && (
+                    <a
+                      class="code-link"
+                      href={url}
+                      target="_blank"
+                      title={`View paper ${name}`}
+                    >
+                      <Scholar />
+                    </a>
+                  )}
+
+                  {github && (
+                    <a
+                      class="code-link"
+                      href={github}
+                      target="_blank"
+                      title={`View paper source code ${name}`}
+                    >
+                      <GitHub />
+                    </a>
+                  )}
+                </h3>
+                <p>{description}</p>
+              </header>
+              <footer>
+                {highlights.map((highlight) => (
+                  <div class="tag" title={highlight}>
+                    <span>{highlight}</span>
+                  </div>
+                ))}
+              </footer>
+            </div>
+          </article>
+        </li>
+      ))
     }
   </ul>
 </Section>
@@ -79,34 +80,22 @@ import { publications } from "@cv";
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  article header {
-    flex: 1;
-  }
-
-  article h3 {
+  .project-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
     margin-bottom: 4px;
   }
 
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
+  .project-name {
+    font-size: 1rem;
   }
 
   article p {
     font-size: 0.75rem;
     line-height: 1.2rem;
     margin-bottom: 4px;
-  }
-
-  article h3 span {
-    color: rgb(0, 188, 47);
-    animation-name: flicker;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
   }
 
   footer {
@@ -117,33 +106,13 @@ import { publications } from "@cv";
     padding-top: 10px;
   }
 
-  footer span {
-    border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
-  }
-
-  .github-code-link {
-    margin-left: 5px;
+  .code-link {
+    margin-left: 6px;
+    color: #111;
   }
 
   .article-inner {
-    padding: 12px;
-  }
-
-  @keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.25;
-    }
-    100% {
-      opacity: 1;
-    }
+    padding: 8px;
   }
 
   @media (width <= 700px) {
@@ -155,12 +124,6 @@ import { publications } from "@cv";
       border: none;
       box-shadow: 0 1px 1px #f2f2f2;
       padding: 0 0 16px 0;
-    }
-  }
-
-  @media print {
-    article h3 span {
-      animation-name: none;
     }
   }
 </style>

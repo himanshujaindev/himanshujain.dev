@@ -6,7 +6,7 @@
     "email": "dev.himanshujain@gmail.com",
     "phone": "",
     "url": "https://himanshujain.dev",
-    "summary": "Software Engineer with 3+ years of experience",
+    "summary": "Results-driven Software Engineer with a track record in designing, developing, and optimizing high-performance, scalable applications, proficient in diverse programming languages, and leveraging cutting-edge frameworks to enhance efficiency and innovation.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -39,51 +39,30 @@
   },
   "work": [
     {
-      "name": "Name",
-      "position": "Software Engineer",
+      "name": "Cisco Systems",
+      "position": "Cloud Engineer (Platform)",
       "url": "https://cisco.com",
-      "startDate": "2022-01-01",
-      "endDate": null,
+      "startDate": "Aug 2022",
+      "endDate": "Mar 2025",
       "summary": [
-        "Designing solutions at a large scale to improve reliability and security. Designing solutions at a large scale to improve reliability and security.",
-        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use. Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
-        "Managing extensive infrastructure in Production during customer-impact.",
-        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
+        "Contributed to setting up the core infrastructure and platform components using Terraform and Kubernetes, with a strong focus on CI/CD integration throughout the process.",
+        "Worked actively on EKS Upgrade and Istio Upgrade of all data centres hosted on AWS with zero downtime.",
+        "Involved in multiple PoC to bring in CNCF hosted projects into the Pipeline like Metrics Server, External DNS, AWS Loadbalancers, Ratelimit and many more.",
+        "Migrated over 150 applications by redesigning the continuous delivery pipeline with Argo CD, enhancing deployment efficiency and reliability.",
+        "Developed Go-based applications, including a kubeconfig generator with customizable RBAC permissions, enabling multiple teams to securely access the Kubernetes cluster.",
+        "Enhanced cloud security for the product by implementing various policies at the S3 bucket, Kubernetes cluster, and IAM levels. Integrated GuardDuty and OPA for centralized monitoring and securing deployed resources.",
+        "Centralized secret management with Vault by consolidating credentials from sources like Jenkins, enhancing security and streamlining sensitive information management across the organization."
       ],
       "skills": [
-        "Next",
-        "Git",
-        "Tailwind",
-        "Next",
-        "Kubernetes",
         "Terraform",
         "Python",
-        "Java"
-      ]
-    },
-    {
-      "name": "Cisco Systems",
-      "position": "Platform Engineer",
-      "url": "https://cisco.com",
-      "startDate": "2022-01-01",
-      "endDate": "2025-03-25",
-      "summary": [
-        "Designing solutions at a large scale to improve reliability and security.",
-        "Building frameworks related to Istio, Kubernetes, and AI/ML for in-house use.",
-        "Managing extensive infrastructure in Production during customer-impact.",
-        "Involved in multiple PoC to bring in Open Source projects into the Pipeline."
-      ],
-      "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Node",
-        "MySQL",
-        "Git",
-        "GitHub",
-        "Tailwind"
+        "Java",
+        "Golang",
+        "AWS",
+        "Kubernetes",
+        "Docker",
+        "Jenkins",
+        "Argo"
       ],
       "pdfs": [
         {
@@ -105,6 +84,33 @@
           "coverImage": "/pdf/award-4.png",
           "title": "A stellar job with Istio Upgrade",
           "pdfUrl": "/pdf/award-4.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Cisco Systems",
+      "position": "Software Engineer Intern",
+      "url": "https://cisco.com",
+      "startDate": "Jan 2022",
+      "endDate": "July 2022",
+      "summary": [
+        "Led an initiative to benchmark large-scale microservices utilizing WebSockets and Kafka, resulting in improved performance insights and optimized system scalability.",
+        "Integrated JMeter into the main pipeline to evaluate system performance under load, leading to a 25% improvement in response times and a 15% increase in service reliability.",
+        "Provided detailed profiling data, enabling the team to enhance scalability and deliver a better customer experience."
+      ],
+      "skills": [
+        "Java",
+        "Scala",
+        "Gatling",
+        "JMeter",
+        "Git",
+        "REST APIs"
+      ],
+      "pdfs": [
+        {
+          "coverImage": "/pdf/cisco-internship.png",
+          "title": "Internship Completion Letter",
+          "pdfUrl": "/pdf/cisco-internship.pdf"
         }
       ]
     }
@@ -132,11 +138,15 @@
       "endDate": "2022-01-01",
       "score": "9.6",
       "courses": [
+        "Data Structures",
+        "Algorithms",
+        "Databases",
+        "Computer Networks",
+        "Big Data",
+        "Machine Learning",
         "Cloud Computing",
-        "Operating Systems",
-        "NLP",
-        "DSA",
-        "Data Analytics"
+        "Operating System",
+        "Deep Learning"
       ]
     }
   ],
@@ -157,11 +167,11 @@
       "logo": "/certificates/cka.png"
     },
     {
-      "name": "Improving Deep Neural Networks",
-      "date": "Aug, 2020",
-      "issuer": "Coursera - deeplearning.ai",
-      "url": "https://drive.google.com/file/d/1cJbG8zeO9ol2mmj9v-v4akjJpZhdXFLK/view?usp=sharing",
-      "logo": "/certificates/coursera.png"
+      "name": "DevOps Engineering on AWS",
+      "date": "Sep, 2022",
+      "issuer": "AWS Training and Certification",
+      "url": "https://drive.google.com/file/d/1uCAkxJ3zNt_G5lHJy4RR7_P7WnsgdRO4/view?usp=sharing",
+      "logo": "/certificates/aws.png"
     },
     {
       "name": "Improving Deep Neural Networks",
@@ -174,35 +184,25 @@
   "publications": [
     {
       "name": "TapasQA",
-      "isActive": false,
-      "description": "Question Answering on Statistical Plots using Google TAPAS",
+      "description": "Question Answering on Statistical Plots using Google TAPAS, ICIPCN 2022",
       "highlights": [
         "Machine Learning",
-        "Challenges for any language"
+        "TAble PArSing (TAPAS)",
+        "Automate Decision Making"
       ],
       "url": "https://link.springer.com/chapter/10.1007/978-3-031-12413-6_6",
       "github": "https://github.com/himanshujaindev/TapasQA"
     },
     {
       "name": "MAPLE",
-      "isActive": false,
-      "description": "Implementation of the paper, MAPLE - MAsking words to generate blackout Poetry using sequence-to-sequence LEarning, ICNLSP 2021",
+      "description": "MAsking words to generate blackout Poetry using sequence-to-sequence LEarning, ICNLSP 2021",
       "highlights": [
         "Blackout Poetry",
-        "Natural Language Processing"
+        "Natural Language Processing",
+        "Transformer",
+        "Turing Test"
       ],
-      "url": "https://aclanthology.org/2021.icnlsp-1.6.pdf",
-      "github": "https://github.com/himanshujaindev/maple"
-    },
-    {
-      "name": "MAPLE",
-      "isActive": false,
-      "description": "Implementation of the paper, MAPLE - MAsking words to generate blackout Poetry using sequence-to-sequence LEarning, ICNLSP 2021",
-      "highlights": [
-        "Blackout Poetry",
-        "Natural Language Processing"
-      ],
-      "url": "https://aclanthology.org/2021.icnlsp-1.6.pdf",
+      "url": "https://aclanthology.org/2021.icnlsp-1.6",
       "github": "https://github.com/himanshujaindev/maple"
     }
   ],
@@ -229,18 +229,37 @@
   ],
   "projects": [
     {
-      "name": "kind-istio",
-      "isActive": true,
-      "description": "Istio installation and examples using Kind cluster",
+      "name": "istio-ambient-mesh",
+      "description": "Deployed sidecar-less service mesh in KinD using Gateway API with ztunnel, waypoint proxy, load balancing, virtual services, and routing rules.",
       "highlights": [
-        "Ambient Mesh",
-        "Service Mesh"
+        "Service Mesh",
+        "Golang"
       ],
       "github": "https://github.com/himanshujaindev/kind-istio"
     },
     {
+      "name": "brevis",
+      "description": "Web App to generate notes from any lecture videos",
+      "highlights": [
+        "NLP",
+        "Summarization",
+        "OpenCV",
+        "React"
+      ],
+      "github": "https://github.com/himanshujaindev/brevis",
+      "youtube": "https://youtu.be/c5A5lYfNrXM"
+    },
+    {
+      "name": "data-structures-algorithms",
+      "description": "Implemented DSA in Java from the ground up, developing core concepts and algorithms independently.",
+      "highlights": [
+        "JAVA",
+        "Algorithms"
+      ],
+      "github": "https://github.com/himanshujaindev/data-structures-algorithms"
+    },
+    {
       "name": "websocket",
-      "isActive": true,
       "description": "Designed and built high-scale websocket framework",
       "highlights": [
         "+50k concurrent connections",
@@ -249,41 +268,30 @@
       "github": "https://github.com/himanshujaindev/websocket"
     },
     {
+      "name": "kafka",
+      "description": "Deployed Kafka on Kubernetes, ensuring efficient message streaming, fault tolerance, and scalable data handling.",
+      "highlights": [
+        "Message Streaming",
+        "Kafka Topics"
+      ],
+      "github": "https://github.com/himanshujaindev/kafka"
+    },
+    {
       "name": "python3-minicompiler",
-      "isActive": true,
-      "description": "Mini Compiler For Python-3 Using Lex and Yacc",
+      "description": "Mini Compiler For Python3 Using Lex and Yacc",
       "highlights": [
         "compiler"
       ],
       "github": "https://github.com/himanshujaindev/Python3-MiniCompiler"
     },
     {
-      "name": "brevis",
-      "isActive": true,
-      "description": "Web App to generate notes from any lecture videos",
-      "highlights": [
-        "Natural Language Processing",
-        "Summarization"
-      ],
-      "url": "youtu.be/c5A5lYfNrXM",
-      "github": "https://github.com/himanshujaindev/brevis"
-    },
-    {
-      "name": "WeatherApp",
-      "description": "Android Weather App Using Kotlin",
-      "highlights": [
-        "android app dev"
-      ],
-      "github": "https://github.com/himanshujaindev/WeatherApp"
-    },
-    {
-      "name": "Serve-CanteenApp",
+      "name": "serve-canteen-app",
       "description": "Android app to automate the process of food ordering at a canteen",
       "highlights": [
         "Android Studio",
         "JAVA"
       ],
-      "url": "https://youtu.be/MfYlr-ivh0I",
+      "youtube": "https://youtu.be/MfYlr-ivh0I",
       "github": "https://github.com/himanshujaindev/Serve-CanteenApp"
     }
   ]

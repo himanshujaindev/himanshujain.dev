@@ -42,7 +42,7 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
           const startYear = new Date(startDate).getFullYear();
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : "Present";
-          const years = `${startYear} - ${endYear}`;
+          const years = `${startDate} - ${endDate}`;
           const isLast = index === work.length - 1;
 
           return (
@@ -141,6 +141,7 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
     font-weight: 500;
     font-size: 14px;
     padding-top: 4px;
+    font-style: italic;
   }
 
   header {
