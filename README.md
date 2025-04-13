@@ -20,3 +20,19 @@
 
 ### Good portfolios
 1. https://github.com/kav-ya/kav-ya.github.io
+
+
+### Logo
+```
+https://www.svgrepo.com/
+https://www.vectorlogo.zone/
+Download
+
+Open with Text
+Paste in .astro
+
+Edit
+    width="14" / "16"
+    height="14" / "16"
+    fill="#444" (Optional)
+```
