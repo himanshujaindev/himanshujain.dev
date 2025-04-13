@@ -8,6 +8,8 @@
 .pdf-item {
     max-width: 100px;
     position: relative;
+    background-color: #7cc3df;
+    border-radius: 8px;
 }
 
 .pdf-image-wrapper {
