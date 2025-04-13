@@ -17,29 +17,31 @@ import "@/components/sections/styles/tag.css";
         return (
           <li>
             <article>
-              <header>
-                <div>
-                  <h3>{institution}</h3>
-                </div>
+              <div class="article-inner">
+                <header>
+                  <div>
+                    <h3>{institution}</h3>
+                  </div>
 
-                <time>{years}</time>
-              </header>
+                  <time>{years}</time>
+                </header>
 
-              <footer>
-                <p>{area}</p>
+                <footer>
+                  <p>{area}</p>
 
-                {/* Courses */}
-                <div class="courses">
-                  {courses &&
-                    courses.map((skill) => {
-                      return (
-                        <div class="tag" title={skill}>
-                          <span>{skill}</span>
-                        </div>
-                      );
-                    })}
-                </div>
-              </footer>
+                  {/* Courses */}
+                  <div class="courses">
+                    {courses &&
+                      courses.map((skill) => {
+                        return (
+                          <div class="tag" title={skill}>
+                            <span>{skill}</span>
+                          </div>
+                        );
+                      })}
+                  </div>
+                </footer>
+              </div>
             </article>
           </li>
         );
@@ -78,6 +80,10 @@ import "@/components/sections/styles/tag.css";
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 16px;
+  }
+
+  .article-inner {
+    padding: 12px;
   }
 
   @media (width <= 700px) {
