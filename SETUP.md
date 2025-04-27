@@ -140,38 +140,37 @@ pnpm exec firebase deploy --only hosting
 > minimalist-portfolio-json@0.0.1 build /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev
 > astro check && astro build
 
-18:58:00 [content] Syncing content
-18:58:00 [content] Synced content
-18:58:00 [types] Generated 19ms
-18:58:00 [check] Getting diagnostics for Astro files in /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev...
+19:28:46 [content] Syncing content
+19:28:46 [content] Synced content
+19:28:46 [types] Generated 21ms
+19:28:46 [check] Getting diagnostics for Astro files in /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev...
 Result (48 files): 
 - 0 errors
 - 0 warnings
 - 0 hints
 
-18:58:02 [content] Syncing content
-18:58:02 [content] Synced content
-18:58:02 [types] Generated 14ms
-18:58:02 [build] output: "static"
-18:58:02 [build] mode: "static"
-18:58:02 [build] directory: /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev/dist/
-18:58:02 [build] Collecting build info...
-18:58:02 [build] ✓ Completed in 17ms.
-18:58:02 [build] Building static entrypoints...
-18:58:02 [vite] ✓ built in 372ms
-18:58:02 [build] ✓ Completed in 386ms.
+19:28:48 [content] Syncing content
+19:28:48 [content] Synced content
+19:28:48 [types] Generated 15ms
+19:28:48 [build] output: "static"
+19:28:48 [build] mode: "static"
+19:28:48 [build] directory: /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev/dist/
+19:28:48 [build] Collecting build info...
+19:28:48 [build] ✓ Completed in 21ms.
+19:28:48 [build] Building static entrypoints...
+19:28:49 [vite] ✓ built in 379ms
+19:28:49 [build] ✓ Completed in 393ms.
 
  building client (vite) 
-18:58:02 [vite] ✓ 4 modules transformed.
-18:58:02 [WARN] [vite] Generated an empty chunk: "Section.astro_astro_type_script_index_0_lang".
-18:58:02 [vite] dist/_astro/KeyboardManager.astro_astro_type_script_index_0_lang.DQNrSzZY.js  9.50 kB │ gzip: 3.56 kB
-18:58:02 [vite] ✓ built in 16ms
+19:28:49 [vite] ✓ 3 modules transformed.
+19:28:49 [vite] dist/_astro/KeyboardManager.astro_astro_type_script_index_0_lang.DQNrSzZY.js  9.50 kB │ gzip: 3.56 kB
+19:28:49 [vite] ✓ built in 14ms
 
  generating static routes 
-18:58:02 ▶ src/pages/index.astro
-18:58:02   └─ /index.html (+6ms) 
-18:58:02 ✓ Completed in 9ms.
+19:28:49 ▶ src/pages/index.astro
+19:28:49   └─ /index.html (+6ms) 
+19:28:49 ✓ Completed in 8ms.
 
-18:58:02 [build] 1 page(s) built in 434ms
-18:58:02 [build] Complete!
+19:28:49 [build] 1 page(s) built in 443ms
+19:28:49 [build] Complete!
 ```
