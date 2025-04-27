@@ -63,9 +63,6 @@ const SKILLS_MAP: Record<string, { icon: any; name: string }> = {
           { name, startDate, endDate, position, summary, url, skills, pdfs },
           index,
         ) => {
-          const startYear = new Date(startDate).getFullYear();
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present";
           const years = `${startDate} - ${endDate}`;
           const isLast = index === work.length - 1;
 

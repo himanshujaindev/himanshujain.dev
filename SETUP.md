@@ -131,3 +131,47 @@ pnpm exec firebase deploy --only hosting
 ### GitHub Actions 
 <img width="702" alt="image" src="https://github.com/user-attachments/assets/383c0459-176f-4a57-aee7-a5043cb6de14" />
 
+
+
+### pnpm build
+```
+❯ pnpm build
+
+> minimalist-portfolio-json@0.0.1 build /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev
+> astro check && astro build
+
+18:58:00 [content] Syncing content
+18:58:00 [content] Synced content
+18:58:00 [types] Generated 19ms
+18:58:00 [check] Getting diagnostics for Astro files in /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev...
+Result (48 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+18:58:02 [content] Syncing content
+18:58:02 [content] Synced content
+18:58:02 [types] Generated 14ms
+18:58:02 [build] output: "static"
+18:58:02 [build] mode: "static"
+18:58:02 [build] directory: /Users/himanshujain/Documents/projects/github.com/himanshujaindev/himanshujain.dev/dist/
+18:58:02 [build] Collecting build info...
+18:58:02 [build] ✓ Completed in 17ms.
+18:58:02 [build] Building static entrypoints...
+18:58:02 [vite] ✓ built in 372ms
+18:58:02 [build] ✓ Completed in 386ms.
+
+ building client (vite) 
+18:58:02 [vite] ✓ 4 modules transformed.
+18:58:02 [WARN] [vite] Generated an empty chunk: "Section.astro_astro_type_script_index_0_lang".
+18:58:02 [vite] dist/_astro/KeyboardManager.astro_astro_type_script_index_0_lang.DQNrSzZY.js  9.50 kB │ gzip: 3.56 kB
+18:58:02 [vite] ✓ built in 16ms
+
+ generating static routes 
+18:58:02 ▶ src/pages/index.astro
+18:58:02   └─ /index.html (+6ms) 
+18:58:02 ✓ Completed in 9ms.
+
+18:58:02 [build] 1 page(s) built in 434ms
+18:58:02 [build] Complete!
+```
