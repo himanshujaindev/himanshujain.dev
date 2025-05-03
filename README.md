@@ -27,7 +27,6 @@
 https://www.svgrepo.com/
 https://www.vectorlogo.zone/
 Download
-
 Open with Text
 Paste in .astro
 
